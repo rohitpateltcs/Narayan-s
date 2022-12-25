@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import ContentPage from "./ContentPage";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +13,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main></main>
+      <main className="flex">
+        <Sidebar />
+        <ContentPage />
+      </main>
     </div>
   );
 };
